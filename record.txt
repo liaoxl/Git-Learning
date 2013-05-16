@@ -236,6 +236,29 @@ Do and on.
 
 Do some changes to here.
 
+$ git push origin
+Username for 'https://github.com': liaoxl
+Password for 'https://liaoxl@github.com': 
+Counting objects: 7, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 576 bytes, done.
+Total 4 (delta 1), reused 0 (delta 0)
+To https://github.com/liaoxl/Git-Learning.git
+   698f4a0..2f5fd3c  master -> master
+
+
+2013-05-16 22:57 Xiangli Liao       o [master] [origin/master] do changes on mo~
+2013-05-16 22:50 Xiangli Liao       M─┐ some changes on morefile
+2013-05-16 22:34 Xiangli Liao       │ o More changes
+2013-05-16 22:36 Xiangli Liao       o │ Changes on local
+2013-05-16 22:32 Xiangli Liao       o─┘ Update morefile
+2013-05-16 21:38 Xiangli Liao       o Create README.md
+2013-05-16 20:32 Xiangli Liao       o some changes
+2013-05-16 19:53 Xiangli Liao       o Test commit -a for new file
+2013-05-16 19:37 Xiangli Liao       o Try second commit
+2013-05-16 19:32 Xiangli Liao       I First Comment
+
 
 
 
