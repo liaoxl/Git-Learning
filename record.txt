@@ -60,3 +60,55 @@ $ git status
 #
 no changes added to commit (use "git add" and/or "git commit -a")
 
+$ git commit -m 'Try second commit'
+# On branch master
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   record.txt
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+
+$ git commit -a -m 'Try second commit'
+[master bf899f5] Try second commit
+ 1 file changed, 34 insertions(+)
+
+$ tig
+2013-05-16 19:37 Xiangli Liao       o [master] Try second commit
+2013-05-16 19:32 Xiangli Liao       I First Comment
+
+$ git status
+# On branch master
+nothing to commit (working directory clean)
+
+
+$ touch morefile
+$ git status
+# On branch master
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	morefile
+nothing added to commit but untracked files present (use "git add" to track)
+
+$ git add morefile
+$ git status 
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	new file:   morefile
+#
+
+
+$ git commit -a -m 'Test commit -a for new file'
+[master 88a80ad] Test commit -a for new file
+ 0 files changed
+create mode 100644 morefile
+
+$ git commit -m 'new file'
+# On branch master
+nothing to commit (working directory clean)
+
+
