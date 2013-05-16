@@ -112,3 +112,101 @@ $ git commit -m 'new file'
 nothing to commit (working directory clean)
 
 
+$ git push origin master 
+Username for 'https://github.com': liaoxl
+Password for 'https://liaoxl@github.com': 
+Counting objects: 12, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (12/12), 1.65 KiB, done.
+Total 12 (delta 2), reused 0 (delta 0)
+To https://github.com/liaoxl/Git-Learning.git
+ * [new branch]      master -> master
+
+
+$ git push origin master 
+Username for 'https://github.com': liaoxl
+Password for 'https://liaoxl@github.com': 
+To https://github.com/liaoxl/Git-Learning.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/liaoxl/Git-Learning.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Merge the remote changes (e.g. 'git pull')
+hint: before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+$ git pull https://github.com/liaoxl/Git-Learning.git
+remote: Counting objects: 4, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0)
+Unpacking objects: 100% (3/3), done.
+From https://github.com/liaoxl/Git-Learning
+ * branch            HEAD       -> FETCH_HEAD
+Updating fd38d27..6a01674
+Fast-forward
+ README.md | 4 ++++
+ 1 file changed, 4 insertions(+)
+ create mode 100644 README.md
+
+$ git pull https://github.com/liaoxl/Git-Learning.git
+remote: Counting objects: 5, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0)
+Unpacking objects: 100% (3/3), done.
+From https://github.com/liaoxl/Git-Learning
+ * branch            HEAD       -> FETCH_HEAD
+Updating 6a01674..e2982ad
+Fast-forward
+ morefile | 1 +
+ 1 file changed, 1 insertion(+)
+
+$ git pull https://github.com/liaoxl/Git-Learning.git
+From https://github.com/liaoxl/Git-Learning
+ * branch            HEAD       -> FETCH_HEAD
+Already up-to-date.
+
+$ git pull https://github.com/liaoxl/Git-Learning.git
+remote: Counting objects: 5, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0)
+Unpacking objects: 100% (3/3), done.
+From https://github.com/liaoxl/Git-Learning
+ * branch            HEAD       -> FETCH_HEAD
+Updating e2982ad..0ba70dc
+error: Your local changes to the following files would be overwritten by merge:
+	morefile
+Please, commit your changes or stash them before you can merge.
+Aborting
+
+$ git status 
+# On branch master
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   morefile
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+
+$ git commit -a -m 'Changes on local'
+[master 78c9b6f] Changes on local
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+$ git pull https://github.com/liaoxl/Git-Learning.git
+From https://github.com/liaoxl/Git-Learning
+ * branch            HEAD       -> FETCH_HEAD
+Auto-merging morefile
+CONFLICT (content): Merge conflict in morefile
+Automatic merge failed; fix conflicts and then commit the result.
+
+<<<<<<< HEAD
+Do and on.
+
+Do some changes to here.
+=======
+Do some changes.
+More changes.
+>>>>>>> 0ba70dcf4bcbdf0a18f08e42f79a9737deb347b6
+
+
+
