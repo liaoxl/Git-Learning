@@ -5,4 +5,8 @@ Git-Learning
 ---
 * Test operations of git
 * Test operations with git and github
+
 * Test when changes in local
+
+* Test changes on github
+
