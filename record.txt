@@ -208,5 +208,34 @@ Do some changes.
 More changes.
 >>>>>>> 0ba70dcf4bcbdf0a18f08e42f79a9737deb347b6
 
+Do some changes.
+More changes.
+Do and on.
+
+Do some changes to here.
+
+$ git commit -a -m 'some changes on morefile'
+[master 698f4a0] some changes on morefile
+
+
+$ git push origin
+Username for 'https://github.com': liaoxl
+Password for 'https://liaoxl@github.com': 
+Counting objects: 12, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (7/7), 2.24 KiB, done.
+Total 7 (delta 0), reused 0 (delta 0)
+To https://github.com/liaoxl/Git-Learning.git
+   0ba70dc..698f4a0  master -> master
+
+
+Do some changes.
+More.
+Do and on.
+
+Do some changes to here.
+
+
 
 
