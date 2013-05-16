@@ -25,4 +25,38 @@ $ git status
 #	record.txt
 nothing added to commit but untracked files present (use "git add" to track)
 
+$ git add .
+$ git status
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#   (use "git rm --cached <file>..." to unstage)
+#
+#	new file:   record.txt
+#
+
+$ tig
+tig: No revisions match the given arguments.
+
+$ git commit -m 'First Comment'
+[master (root-commit) 11a8c45] First Comment
+1 file changed, 28 insertions(+)
+create mode 100644 record.txt
+
+
+$ tig
+2013-05-16 19:32 Xiangli Liao       I [master] First Comment
+
+
+$ git status
+# On branch master
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   record.txt
+#
+no changes added to commit (use "git add" and/or "git commit -a")
 
